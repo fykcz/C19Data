@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "C19DataLoader": {
+      "commandName": "Project",
+      "commandLineArgs": "--config=config.json"
+    }
+  }
+}

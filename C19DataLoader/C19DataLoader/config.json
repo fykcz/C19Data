@@ -1,0 +1,187 @@
+{
+  "c19": {
+    "target": {
+      "server": "fykbuntu.westeurope.cloudapp.azure.com",
+      "database": "C19",
+      "authenticationtype": "SQL",
+      "sqlauthentication": {
+        "login": "c19w",
+        "password": "wL5H9Eq+fouSSDoG0c4geEF3icnJ/5ie0HvjE8TUNU0="
+      },
+      "preload": "",
+      "postload": "exec L0.usp_TransferL02L2"
+    },
+    "transfers": [
+      {
+        "transfer": {
+          "name": "Zakladni prehled",
+          "loginfo": "Struèný náhled na základní epidemiologická data",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/zakladni-prehled.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.zakladni_prehled",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Nakaza",
+          "loginfo": "Celkový (kumulativní) poèet osob s prokázanou nákazou dle krajských hygienických stanic vèetnì laboratoøí",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakaza.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.nakaza",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Hospitalizace",
+          "loginfo": "Datová sada obsahující data hospitalizovaných pacientù popisující prùbìh hospitalizace",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/hospitalizace.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.hospitalizace",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Osoby",
+          "loginfo": "Pøehled osob s prokázanou nákazou dle hlášení krajských hygienických stanic",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/osoby.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.osoby",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "PES_CR",
+          "loginfo": "Protiepidemický systém ÈR (PES) - ÈR",
+          "source": {
+            "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_CR_verze2.csv",
+            "columnseparator": ";",
+            "decimalseparator": "."
+          },
+          "target": "L0.PES_CR",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "PES_kraje",
+          "loginfo": "Protiepidemický systém ÈR (PES) - kraje",
+          "source": {
+            "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_kraje_verze2.csv",
+            "columnseparator": ";",
+            "decimalseparator": "."
+          },
+          "target": "L0.PES_kraje",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Umrti",
+          "loginfo": "Pøehled úmrtí dle hlášení krajských hygienických stanic",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/umrti.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.umrti",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Kumulativni",
+          "loginfo": "Celkový (kumulativní) poèet osob s prokázanou nákazou dle krajských hygienických stanic vèetnì laboratoøí, poèet vyléèených, poèet úmrtí a provedených testù",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakazeni-vyleceni-umrti-testy.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.kumulovany",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Zdravotnicke zarizeni 01",
+          "loginfo": "Volné kapacity podle zdravotnických zaøízení do 25.3.2021",
+          "source": {
+            "url": "https://dip.mzcr.cz/api/v1/kapacity-intenzivni-pece-zdravotnicke-zarizeni.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.kapacity_01",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Zdravotnicke zarizeni 02",
+          "loginfo": "Volné kapacity podle zdravotnických zaøízení od 30.3.2021",
+          "source": {
+            "url": "https://dip.mzcr.cz/api/v1/kapacity-intenzivni-pece-zdravotnicke-zarizeni-04-2021.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.kapacity_02",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Ockovani",
+          "loginfo": "Pøehled vykázaných oèkování podle krajù ÈR",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.ockovani_kraje",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "WW covid latest",
+          "loginfo": "Shortened version complete dataset with only the latest value for each location and metric",
+          "source": {
+            "url": "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.ww_covid_latest",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "WW covid full",
+          "loginfo": "All historical data on the pandemic up to the date of publication",
+          "source": {
+            "url": "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.ww_covid_full",
+          "batchsize": "10000"
+        }
+      }
+    ]
+  },
+  "tenantid": "35481dd1-663c-4a5f-9801-9396c6b35273"
+}

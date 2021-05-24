@@ -1,0 +1,29 @@
+{
+  "c19": {
+    "target": {
+      "server": "fykbuntu.westeurope.cloudapp.azure.com",
+      "database": "C19",
+      "authenticationtype": "SQL",
+      "sqlauthentication": {
+        "login": "c19w",
+        "password": "wL5H9Eq+fouSSDoG0c4geEF3icnJ/5ie0HvjE8TUNU0="
+      }
+    },
+    "transfers": [
+      {
+        "transfer": {
+          "name": "Pocty umrti",
+          "loginfo": "Zemøelí podle týdnù a vìkových skupin v Èeské republice",
+          "source": {
+            "url": "https://www.czso.cz/documents/62353418/155512301/130185-21data050421.csv/780aec34-4493-474e-8c00-793187372965?version=1.1",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.pocty_umrti",
+          "batchsize": "10000"
+        }
+      }
+    ]
+  },
+  "tenantid": "35481dd1-663c-4a5f-9801-9396c6b35273"
+}

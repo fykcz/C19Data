@@ -1,0 +1,44 @@
+{
+  "c19": {
+    "target": {
+      "server": "fykbuntu.westeurope.cloudapp.azure.com",
+      "database": "C19",
+      "authenticationtype": "SQL",
+      "sqlauthentication": {
+        "login": "c19w",
+        "password": "wL5H9Eq+fouSSDoG0c4geEF3icnJ/5ie0HvjE8TUNU0="
+      }
+    },
+    "transfers": [
+      {
+        "transfer": {
+          "name": "Okresy",
+          "loginfo": "Okresy",
+          "source": {
+            "url": "http://apl.czso.cz/iSMS/cisexp.jsp?kodcis=109&typdat=0&cisvaz=80007_210&datpohl=05.05.2021&cisjaz=203&format=2&separator=%2C",
+            "columnseparator": ",",
+            "decimalseparator": ".",
+            "encoding": "windows-1250"
+          },
+          "target": "L0.okresy",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Kraje",
+          "loginfo": "Kraje",
+          "source": {
+            "url": "http://apl.czso.cz/iSMS/cisexp.jsp?kodcis=108&typdat=0&cisvaz=80007_136&datpohl=05.05.2021&cisjaz=203&format=2&separator=%2C",
+            "columnseparator": ",",
+            "decimalseparator": ".",
+            "encoding": "windows-1250"
+          },
+          "target": "L0.kraje",
+          "batchsize": "10000"
+        }
+      }
+    ]
+  },
+  "tenantid": "35481dd1-663c-4a5f-9801-9396c6b35273"
+}
