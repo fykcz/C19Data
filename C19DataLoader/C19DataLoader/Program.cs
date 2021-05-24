@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Text;
 
 using Fyk.Utils;
 
@@ -12,6 +13,10 @@ namespace Fyk.C19.C19DataLoader
 
         private static void Main(string[] args)
         {
+            System.Text.EncodingProvider ppp = System.Text.CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(ppp);
+            Console.OutputEncoding = Encoding.GetEncoding("windows-1250");
+
             var arguments = new Arguments(args);
             if ((arguments["help"] != null) || (arguments["?"] != null))
                 HelpAndExit();
@@ -30,7 +35,7 @@ namespace Fyk.C19.C19DataLoader
 
             var x = new C19LoadData();
             var log = new ILogger();
-            x.TransferData(new System.IO.StreamReader(cfg), log);
+            x.TransferData(new System.IO.StreamReader(cfg, Encoding.GetEncoding("windows-1250")), log);
 
 #if DEBUG
             if (!Console.IsOutputRedirected)
