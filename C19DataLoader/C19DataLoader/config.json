@@ -15,7 +15,7 @@
       {
         "transfer": {
           "name": "Zakladni prehled",
-          "loginfo": "Struèný náhled na základní epidemiologická data",
+          "loginfo": "Strucny nahled na zakladni epidemiologicka data",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/zakladni-prehled.csv",
             "columnseparator": ",",
@@ -28,7 +28,7 @@
       {
         "transfer": {
           "name": "Nakaza",
-          "loginfo": "Celkový (kumulativní) poèet osob s prokázanou nákazou dle krajských hygienických stanic vèetnì laboratoøí",
+          "loginfo": "Celkovy (kumulativni) pocet osob s prokazanou nakazou dle krajskych hygienickych stanic vcetne laboratori",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakaza.csv",
             "columnseparator": ",",
@@ -41,7 +41,7 @@
       {
         "transfer": {
           "name": "Hospitalizace",
-          "loginfo": "Datová sada obsahující data hospitalizovaných pacientù popisující prùbìh hospitalizace",
+          "loginfo": "Datova sada obsahujici data hospitalizovanych pacientu popisujici prubeh hospitalizace",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/hospitalizace.csv",
             "columnseparator": ",",
@@ -54,7 +54,7 @@
       {
         "transfer": {
           "name": "Osoby",
-          "loginfo": "Pøehled osob s prokázanou nákazou dle hlášení krajských hygienických stanic",
+          "loginfo": "Prehled osob s prokazanou nakazou dle hlaseni krajskych hygienickych stanic",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/osoby.csv",
             "columnseparator": ",",
@@ -67,7 +67,7 @@
       {
         "transfer": {
           "name": "PES_CR",
-          "loginfo": "Protiepidemický systém ÈR (PES) - ÈR",
+          "loginfo": "Protiepidemicky system CR (PES) - CR",
           "source": {
             "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_CR_verze2.csv",
             "columnseparator": ";",
@@ -80,7 +80,7 @@
       {
         "transfer": {
           "name": "PES_kraje",
-          "loginfo": "Protiepidemický systém ÈR (PES) - kraje",
+          "loginfo": "Protiepidemicky system CR (PES) - kraje",
           "source": {
             "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_kraje_verze2.csv",
             "columnseparator": ";",
@@ -93,7 +93,7 @@
       {
         "transfer": {
           "name": "Umrti",
-          "loginfo": "Pøehled úmrtí dle hlášení krajských hygienických stanic",
+          "loginfo": "Prehled umrti dle hlaseni krajskych hygienickych stanic",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/umrti.csv",
             "columnseparator": ",",
@@ -106,7 +106,7 @@
       {
         "transfer": {
           "name": "Kumulativni",
-          "loginfo": "Celkový (kumulativní) poèet osob s prokázanou nákazou dle krajských hygienických stanic vèetnì laboratoøí, poèet vyléèených, poèet úmrtí a provedených testù",
+          "loginfo": "Celkovy (kumulativni) pocet osob s prokazanou nakazou dle krajskych hygienickych stanic vcetne laboratori, pocet vylecenych, pocet umrti a provedenych testu",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakazeni-vyleceni-umrti-testy.csv",
             "columnseparator": ",",
@@ -119,7 +119,7 @@
       {
         "transfer": {
           "name": "Zdravotnicke zarizeni 01",
-          "loginfo": "Volné kapacity podle zdravotnických zaøízení do 25.3.2021",
+          "loginfo": "Volne kapacity podle zdravotnickych zarizeni do 25.3.2021",
           "source": {
             "url": "https://dip.mzcr.cz/api/v1/kapacity-intenzivni-pece-zdravotnicke-zarizeni.csv",
             "columnseparator": ",",
@@ -132,7 +132,7 @@
       {
         "transfer": {
           "name": "Zdravotnicke zarizeni 02",
-          "loginfo": "Volné kapacity podle zdravotnických zaøízení od 30.3.2021",
+          "loginfo": "Volne kapacity podle zdravotnickych zarizeni od 30.3.2021",
           "source": {
             "url": "https://dip.mzcr.cz/api/v1/kapacity-intenzivni-pece-zdravotnicke-zarizeni-04-2021.csv",
             "columnseparator": ",",
@@ -145,7 +145,7 @@
       {
         "transfer": {
           "name": "Ockovani",
-          "loginfo": "Pøehled vykázaných oèkování podle krajù ÈR",
+          "loginfo": "Prehled vykazanych ockovani podle kraju CR",
           "source": {
             "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani.csv",
             "columnseparator": ",",

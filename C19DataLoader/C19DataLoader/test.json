@@ -12,14 +12,14 @@
     "transfers": [
       {
         "transfer": {
-          "name": "Pocty umrti",
-          "loginfo": "Zemøelí podle týdnù a vìkových skupin v Èeské republice",
+          "name": "Kumulativni",
+          "loginfo": "Celkovy (kumulativni) pocet osob s prokazanou nakazou dle krajskych hygienickych stanic vcetne laboratori, pocet vylecenych, pocet umrti a provedenych testu",
           "source": {
-            "url": "https://www.czso.cz/documents/62353418/155512301/130185-21data050421.csv/780aec34-4493-474e-8c00-793187372965?version=1.1",
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakazeni-vyleceni-umrti-testy.csv",
             "columnseparator": ",",
             "decimalseparator": "."
           },
-          "target": "L0.pocty_umrti",
+          "target": "L0.kumulovany",
           "batchsize": "10000"
         }
       }

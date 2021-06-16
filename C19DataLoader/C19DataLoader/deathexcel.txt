@@ -1,0 +1,26 @@
+https://vdb.czso.cz/vdbvo2/faces/cs/xlsexp?page=vystup-objekt&z=T&f=TABULKA&pvo=DEMD007&vyhltext=DEMD007&bkvt=REVNRDAwNw..&katalog=all&&u=v20__VUZEMI__97__19&str=v21&kodjaz=203&expPoznData=N&expPoznTexty=N&nasexp=s&kodyklice=N&origurl=https%3A%2F%2Fvdb.czso.cz%2Fvdbvo2%2Ffaces%2Fcs%2Findex.jsf%3Fpage%3Dvystup-objekt%26z%3DT%26f%3DTABULKA%26pvo%3DDEMD007%26vyhltext%3DDEMD007%26bkvt%3DREVNRDAwNw..%26katalog%3Dall%26%26u%3Dv20__VUZEMI__97__19%26str%3Dv21%26kodjaz%3D203&dldId=1623673476012
+https://vdb.czso.cz/vdbvo2/faces/cs/xlsexp?
+	page=vystup-objekt&
+	z=T&
+	f=TABULKA&
+	pvo=DEMD007&
+	vyhltext=DEMD007&
+	bkvt=REVNRDAwNw..&
+	katalog=all&&
+	u=v20__VUZEMI__97__19&
+	str=v21&
+	kodjaz=203&
+	expPoznData=N&
+	expPoznTexty=N&
+	nasexp=s&
+	kodyklice=N&
+	origurl=https%3A%2F%2Fvdb.czso.cz%2Fvdbvo2%2Ffaces%2Fcs%2Findex.jsf%3Fpage%3Dvystup-objekt%26z%3DT%26f%3DTABULKA%26pvo%3DDEMD007%26vyhltext%3DDEMD007%26bkvt%3DREVNRDAwNw..%26katalog%3Dall%26%26u%3Dv20__VUZEMI__97__19%26str%3Dv21%26kodjaz%3D203&
+	dldId=1623673476012
+
+#########
+https://vdb.czso.cz/vdbvo2/faces/cs/xlsexp?page=vystup-objekt&z=T&f=TABULKA&pvo=DEMD007&katalog=all&str=v21&kodjaz=203&expPoznData=N&expPoznTexty=N
+#########
+
+
+https://www.czso.cz/documents/62353418/155512301/130185-21data050421.csv/780aec34-4493-474e-8c00-793187372965?version=1.1
+https://www.czso.cz/documents/62353418/155512345/130185-21data060821.csv/747c5a87-89ad-4cf8-bd03-5a3bc3707904?version=1.1
