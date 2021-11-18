@@ -27,19 +27,6 @@
       },
       {
         "transfer": {
-          "name": "Nakaza",
-          "loginfo": "Celkovy (kumulativni) pocet osob s prokazanou nakazou dle krajskych hygienickych stanic vcetne laboratori",
-          "source": {
-            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/nakaza.csv",
-            "columnseparator": ",",
-            "decimalseparator": "."
-          },
-          "target": "L0.nakaza",
-          "batchsize": "10000"
-        }
-      },
-      {
-        "transfer": {
           "name": "Hospitalizace",
           "loginfo": "Datova sada obsahujici data hospitalizovanych pacientu popisujici prubeh hospitalizace",
           "source": {
@@ -61,32 +48,6 @@
             "decimalseparator": "."
           },
           "target": "L0.osoby",
-          "batchsize": "10000"
-        }
-      },
-      {
-        "transfer": {
-          "name": "PES_CR",
-          "loginfo": "Protiepidemicky system CR (PES) - CR",
-          "source": {
-            "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_CR_verze2.csv",
-            "columnseparator": ";",
-            "decimalseparator": "."
-          },
-          "target": "L0.PES_CR",
-          "batchsize": "10000"
-        }
-      },
-      {
-        "transfer": {
-          "name": "PES_kraje",
-          "loginfo": "Protiepidemicky system CR (PES) - kraje",
-          "source": {
-            "url": "https://share.uzis.cz/s/BRfppYFpNTddAy4/download?path=%2F&files=pes_kraje_verze2.csv",
-            "columnseparator": ";",
-            "decimalseparator": "."
-          },
-          "target": "L0.PES_kraje",
           "batchsize": "10000"
         }
       },
@@ -178,6 +139,45 @@
             "decimalseparator": "."
           },
           "target": "L0.ww_covid_full",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Ockovani a umrti",
+          "loginfo": "Prehled umrti s ohledem na ockovani",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-umrti.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.umrtiaockovani",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Ockovani a hospitalizace",
+          "loginfo": "Prehled hospitalizaci s ohledem na ockovani",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-hospitalizace.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.hospitalizaceaockovani",
+          "batchsize": "10000"
+        }
+      },
+      {
+        "transfer": {
+          "name": "Ockovani a JIP",
+          "loginfo": "Prehled JIP s ohledem na ockovani",
+          "source": {
+            "url": "https://onemocneni-aktualne.mzcr.cz/api/v2/covid-19/ockovani-jip.csv",
+            "columnseparator": ",",
+            "decimalseparator": "."
+          },
+          "target": "L0.jipaockovani",
           "batchsize": "10000"
         }
       }

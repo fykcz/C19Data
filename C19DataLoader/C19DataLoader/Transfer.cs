@@ -45,6 +45,10 @@ namespace Fyk.C19.C19DataLoader
             {
                 WriteData(tableName, sourceUrl, encoding, batchSize, columnSeparator, decimalSeparator);
             }
+            catch (SqlException sex)
+            {
+                LogError(sex.Message);
+            }
             catch (Exception ex)
             {
                 LogError(ex.Message);
@@ -72,27 +76,36 @@ namespace Fyk.C19.C19DataLoader
             var reader = GetCSV(sourceUrl, columnSeparator, encoding);
             TimeSpan ts = sw.Elapsed;
             logger.LogDebug($"Data downloaded from {sourceUrl}: {ts}");
+            long rowCounter = 0;
             if (reader.Read())
             {
                 while (reader.Read())
                 {
+                    rowCounter++;
                     var nr = data.NewRow();
                     for (int i = 0; i < reader.FieldsCount; i++)
                     {
-                        if (string.IsNullOrEmpty(reader[i]))
+                        try
                         {
-                            nr[i] = DBNull.Value;
-                        }
-                        else
-                        {
-                            if (data.Columns[i].DataType == typeof(decimal) ||
-                                data.Columns[i].DataType == typeof(double) ||
-                                data.Columns[i].DataType == typeof(Double) ||
-                                data.Columns[i].DataType == typeof(Decimal) ||
-                                data.Columns[i].DataType == typeof(float))
-                                nr[i] = decimal.Parse(reader[i], new NumberFormatInfo() { NumberDecimalSeparator = decimalSeparator });
+                            if (string.IsNullOrEmpty(reader[i]))
+                            {
+                                nr[i] = DBNull.Value;
+                            }
                             else
-                                nr[i] = Convert.ChangeType(reader[i], data.Columns[i].DataType);
+                            {
+                                if (data.Columns[i].DataType == typeof(decimal) ||
+                                    data.Columns[i].DataType == typeof(double) ||
+                                    data.Columns[i].DataType == typeof(Double) ||
+                                    data.Columns[i].DataType == typeof(Decimal) ||
+                                    data.Columns[i].DataType == typeof(float))
+                                    nr[i] = decimal.Parse(reader[i], new NumberFormatInfo() { NumberDecimalSeparator = decimalSeparator });
+                                else
+                                    nr[i] = Convert.ChangeType(reader[i], data.Columns[i].DataType);
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            logger.LogError($"{ex.Message} on row {rowCounter} in column {i + 1}");
                         }
                     }
                     data.Rows.Add(nr);
@@ -105,6 +118,7 @@ namespace Fyk.C19.C19DataLoader
                     sbc.BatchSize = batchSize;
                     foreach (DataColumn c in data.Columns)
                         sbc.AddColumnMapping(c.ColumnName, c.ColumnName);
+
                     sbc.WriteToServer(data);
                     logger.LogInformation($"Data loaded in {data.TableName}: {sw.Elapsed - ts}");
                 }

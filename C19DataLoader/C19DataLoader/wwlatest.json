@@ -8,19 +8,20 @@
         "login": "c19w",
         "password": "wL5H9Eq+fouSSDoG0c4geEF3icnJ/5ie0HvjE8TUNU0="
       },
-      "postload": "exec L0.usp_TransferPoctyUmrti"
+      "preload": "",
+      "postload": ""
     },
     "transfers": [
-      {
+  {
         "transfer": {
-          "name": "Pocty umrti",
-          "loginfo": "Zemreli podle tydnu a vekovych skupin v Ceske republice",
+          "name": "WW covid latest",
+          "loginfo": "Shortened version complete dataset with only the latest value for each location and metric",
           "source": {
-            "url": "https://www.czso.cz/documents/62353418/155512335/130185-21data090721.csv/3f84fef3-1cd6-4448-9dda-035539b69fb9?version=1.0",
+            "url": "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/latest/owid-covid-latest.csv",
             "columnseparator": ",",
             "decimalseparator": "."
           },
-          "target": "L0.pocty_umrti",
+          "target": "L0.ww_covid_latest",
           "batchsize": "10000"
         }
       }
