@@ -119,7 +119,14 @@ namespace Fyk.C19.C19DataLoader
                     foreach (DataColumn c in data.Columns)
                         sbc.AddColumnMapping(c.ColumnName, c.ColumnName);
 
-                    sbc.WriteToServer(data);
+                    try
+                    {
+                        sbc.WriteToServer(data);
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.LogError($"WriteToServer error: {ex.Message} / {ex.InnerException.Message}");
+                    }
                     logger.LogInformation($"Data loaded in {data.TableName}: {sw.Elapsed - ts}");
                 }
             }
