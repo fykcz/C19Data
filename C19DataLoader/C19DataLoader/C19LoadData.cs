@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Fyk.C19.C19DataLoader.Config;
-using System.Data.SqlClient;
-using System.Diagnostics;
 //using Microsoft.Extensions.Logging;
 
 namespace Fyk.C19.C19DataLoader
@@ -24,6 +16,9 @@ namespace Fyk.C19.C19DataLoader
                 InitialCatalog = tgt.Database,
                 IntegratedSecurity = true
             };
+
+            logger.LogInformation($"Transfer started");
+
             if (tgt.AuthenticationType.Equals(C19DataLoader.Config.Target.SQL))
             {
                 scb.IntegratedSecurity = false;
@@ -65,6 +60,8 @@ namespace Fyk.C19.C19DataLoader
                     cmd.ExecuteNonQuery();
                 }
             }
+
+            logger.LogInformation($"Transfer completed");
 
             conn.Close();
         }
